@@ -31,7 +31,7 @@ def get_base64(file_path):
     with open(file_path, "rb") as f:
         return base64.b64encode(f.read()).decode()
 
-bg_image = get_base64("assets/login img.png")
+bg_image = get_base64("assets/login_img.png")
 
 st.markdown(f"""
 <style>
@@ -244,3 +244,4 @@ else:
         if st.button("⬅ Back to Dashboard"):
             st.session_state.active_page = "dashboard"
             st.rerun()
+
