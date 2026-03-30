@@ -1211,9 +1211,9 @@ else:
 
             # Create styled dataframe
             metrics_display = metrics_df.copy()
-            metrics_display["Volatility (%)"] = metrics_display["Volatility (%)"].apply(lambda x: f"<b style='color: #FFD700;'>{x:.2f}%</b>")
-            metrics_display["Sharpe Ratio"] = metrics_display["Sharpe Ratio"].apply(lambda x: f"<b style='color: #00FF00;'>{x:.2f}</b>")
-            metrics_display["Beta vs BTC"] = metrics_display["Beta vs BTC"].apply(lambda x: f"<b style='color: #66FF99;'>{x:.2f}</b>")
+            metrics_display["Volatility (%)"] = metrics_display["Volatility (%)"].apply(lambda x: f"{x:.2f}")
+            metrics_display["Sharpe Ratio"] = metrics_display["Sharpe Ratio"].apply(lambda x: f"{x:.2f}")
+            metrics_display["Beta vs BTC"] = metrics_display["Beta vs BTC"].apply(lambda x: f"{x:.2f}")
 
             # Display table with smaller font
             st.markdown("""
